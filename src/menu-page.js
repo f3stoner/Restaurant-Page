@@ -27,4 +27,22 @@ beverage.appendChild(bevTitle);
 beverage.appendChild(bevList);
 content.appendChild(beverage);
 
+const entree = document.createElement("div");
+const entreeTitle = document.createElement("div");
+const entList = document.createElement("ul");
+const entrees = ["Steak and Potato: $24.99", "Chicken Fried Steak: $19.99", "Shrimp and Grits: $16.99"];
+
+entree.classList.add("subcontainer", "entree");
+entreeTitle.className = "subtitle";
+entreeTitle.textContent = "Entrees";
+entList.className = "entList";
+for (const ent of entrees) {
+    const list = document.createElement("li");
+    list.textContent = `${ent}`;
+    entList.appendChild(list);
+}
+entree.appendChild(entreeTitle);
+entree.appendChild(entList);
+content.appendChild(entree);
+
 }
